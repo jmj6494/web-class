@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>시간표</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+
+            background-image: 
+                linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+                url('https://i.pinimg.com/1200x/b0/df/95/b0df95cfc6f31293d002d4d6daac253c.jpg');
+            background-size: cover;
+            background-position: center;
+
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .container {
+            width: 780px;
+            margin-left: 60px;
+        }
+
+        h1 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 26px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        th, td {
+            padding: 14px;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        th {
+            background-color: #6c8cff;
+            color: white;
+        }
+
+        tr:not(:last-child) td {
+            border-bottom: 1px solid #eee;
+        }
+
+        tr td:not(:last-child),
+        tr th:not(:last-child) {
+            border-right: 1px solid #eee;
+        }
+
+        .period {
+            background-color: #eef1ff;
+            font-weight: bold;
+            width: 100px;
+        }
+
+        .period small {
+            display: block;
+            font-size: 12px;
+            color: #666;
+            margin-top: 4px;
+        }
+
+        /* 🍱 점심시간 (톤 맞춤) */
+        .lunch {
+            background-color: #e0e7ff;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* 🎨 과목 색 (파스텔톤) */
+        .sub1 { background-color: #fef3f2; } /* 연핑크 */
+        .sub2 { background-color: #f0f9ff; } /* 연하늘 */
+        .sub3 { background-color: #f0fdf4; } /* 연초록 */
+        .sub4 { background-color: #fff7ed; } /* 연주황 */
+        .sub5 { background-color: #f5f3ff; } /* 연보라 */
+
+        td:hover {
+            filter: brightness(0.95);
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>📚 학교 시간표</h1>
+
+    <table>
+        <tr>
+            <th>교시</th>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+        </tr>
+
+        <tr>
+            <td class="period">1교시<small>09:00 ~ 09:50</small></td>
+            <td class="sub1">국어</td>
+            <td class="sub2">수학</td>
+            <td class="sub3">영어</td>
+            <td class="sub4">과학</td>
+            <td class="sub5">사회</td>
+        </tr>
+
+        <tr>
+            <td class="period">2교시<small>10:00 ~ 10:50</small></td>
+            <td class="sub2">수학</td>
+            <td class="sub1">국어</td>
+            <td class="sub4">과학</td>
+            <td class="sub3">영어</td>
+            <td class="sub5">체육</td>
+        </tr>
+
+        <tr>
+            <td class="period">3교시<small>11:00 ~ 11:50</small></td>
+            <td class="sub3">영어</td>
+            <td class="sub4">과학</td>
+            <td class="sub2">수학</td>
+            <td class="sub1">국어</td>
+            <td class="sub5">미술</td>
+        </tr>
+
+        <tr>
+            <td class="period">4교시<small>12:00 ~ 12:50</small></td>
+            <td class="sub4">과학</td>
+            <td class="sub3">영어</td>
+            <td class="sub1">국어</td>
+            <td class="sub2">수학</td>
+            <td class="sub5">음악</td>
+        </tr>
+
+        <tr>
+            <td colspan="6" class="lunch">🍱 점심시간</td>
+        </tr>
+
+        <tr>
+            <td class="period">5교시<small>13:50 ~ 14:40</small></td>
+            <td class="sub5">사회</td>
+            <td class="sub3">체육</td>
+            <td class="sub1">미술</td>
+            <td class="sub2">음악</td>
+            <td class="sub4">자습</td>
+        </tr>
+
+        <tr>
+            <td class="period">6교시<small>14:50 ~ 15:40</small></td>
+            <td class="sub3">체육</td>
+            <td class="sub5">사회</td>
+            <td class="sub2">음악</td>
+            <td class="sub1">미술</td>
+            <td class="sub4">동아리</td>
+        </tr>
+
+        <tr>
+            <td class="period">7교시<small>15:50 ~ 16:40</small></td>
+            <td class="sub4">자습</td>
+            <td class="sub5">동아리</td>
+            <td class="sub3">체육</td>
+            <td class="sub2">사회</td>
+            <td class="sub1">자습</td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
